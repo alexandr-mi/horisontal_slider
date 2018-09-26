@@ -1,0 +1,27 @@
+.mi_slider__dotes {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.mi_slider__dot {
+  position: relative;
+  margin: 5px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(61, 61, 61, 1.00);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.6s;
+
+  &:hover {
+    border: 2px solid white;
+  }
+
+  &.is_active {
+    background-color: rgba(65, 164, 128, 1.00);
+  }
+}

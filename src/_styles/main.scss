@@ -1,0 +1,11 @@
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Import Modules
+@import './global/main';
+
+@import '../_modules/loader/main';
+@import '../_modules/header/main';
+@import '../_modules/content/main';
+@import '../_modules/dotes/main';
+@import '../_modules/arrows/main';

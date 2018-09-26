@@ -1,0 +1,18 @@
+@import '../one/main';
+@import '../two/main';
+@import '../tree/main';
+@import '../four/main';
+@import '../five/main';
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.content__container {
+  width: 500%;
+  height: 100%;
+}
+

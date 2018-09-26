@@ -1,0 +1,25 @@
+.mi_slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-left: 5px solid #3d3d3d;
+  border-top: 5px solid #3d3d3d;
+  border-top-left-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: white;
+  }
+
+  &-prev {
+    left: 20px;
+    transform: rotate(-45deg);
+  }
+
+  &-next {
+    transform: rotate(135deg);
+    right: 20px;
+  }
+}

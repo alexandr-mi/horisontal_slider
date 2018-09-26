@@ -1,0 +1,132 @@
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav__btn {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: white;
+    transition-property: top, transform;
+    transition-duration: 0.3s;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    top: 100%;
+  }
+}
+
+.nav__item {
+  margin-left: 10px;
+  border-bottom: 1px solid transparent;
+
+  &.active {
+    border-bottom: 1px solid white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid white;
+  }
+
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+}
+
+.nav__item-login {
+  padding-top: 1px;
+  border-radius: 5px;
+  margin-left: 50px;
+  background-color: #ce4e4e;
+
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .nav {
+    &.active {
+      .nav__list {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav__item {
+        bottom: 0;
+        pointer-events: auto;
+      }
+
+      .nav__btn {
+        &:before {
+          top: calc(50% - 1px);
+          transform: rotate(-135deg);
+        }
+
+        &:after {
+          top: calc(50% - 1px);
+          transform: rotate(135deg);
+        }
+      }
+    }
+
+    &__btn {
+      display: block;
+    }
+
+    &__list {
+      pointer-events: none;
+      transition: opacity 0.5s;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      transform: translateX(50%);
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+
+
+
+    &__item {
+      pointer-events: none;
+      transition: bottom 0.5s;
+      bottom: -10px;
+      position: relative;
+      width: 100%;
+      margin: 0;
+
+      &.active, &:hover {
+        border-color: transparent;
+      }
+
+      a {
+        width: 100%;
+        text-align: center;
+
+      }
+    }
+  }
+}

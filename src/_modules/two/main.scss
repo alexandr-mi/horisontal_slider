@@ -1,0 +1,82 @@
+.two {
+  position: relative;
+
+  & .parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+
+    &_1 {
+      background-image: url(../images/bg/2/4.png);
+    }
+
+    &_2 {
+      background-image: url(../images/bg/2/3.png);
+    }
+
+    &_3 {
+      background-image: url(../images/bg/2/2.png);
+    }
+
+    &_4 {
+      background-image: url(../images/bg/2/1.png);
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .two {
+
+    & .parallax {
+
+      &_1 {
+        background-image: url(../images/bg/2m/4.png);
+      }
+
+      &_2 {
+        background-image: url(../images/bg/2m/3.png);
+      }
+
+      &_3 {
+        background-image: url(../images/bg/2m/2.png);
+      }
+
+      &_4 {
+        background-image: url(../images/bg/2m/1.png);
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .two {
+
+    & .parallax {
+
+      &_1 {
+        background-image: url(../images/bg/2s/4.png);
+      }
+
+      &_2 {
+        background-image: url(../images/bg/2s/3.png);
+      }
+
+      &_3 {
+        background-image: url(../images/bg/2s/2.png);
+      }
+
+      &_4 {
+        background-image: url(../images/bg/2s/1.png);
+      }
+    }
+
+  }
+}

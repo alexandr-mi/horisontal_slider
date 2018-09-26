@@ -1,0 +1,83 @@
+.four {
+  position: relative;
+
+  & .parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+
+    &_1 {
+      background-image: url(../images/bg/4/4.png);
+    }
+
+    &_2 {
+      background-image: url(../images/bg/4/3.png);
+    }
+
+    &_3 {
+      background-image: url(../images/bg/4/2.png);
+    }
+
+    &_4 {
+      background-image: url(../images/bg/4/1.png);
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+  .four {
+
+    & .parallax {
+      &_1 {
+        background-image: url(../images/bg/4m/4.png);
+      }
+
+      &_2 {
+        background-image: url(../images/bg/4m/3.png);
+      }
+
+      &_3 {
+        background-image: url(../images/bg/4m/2.png);
+      }
+
+      &_4 {
+        background-image: url(../images/bg/4m/1.png);
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .four {
+
+    & .parallax {
+      &_1 {
+        background-image: url(../images/bg/4s/4.png);
+      }
+
+      &_2 {
+        background-image: url(../images/bg/4s/3.png);
+      }
+
+      &_3 {
+        background-image: url(../images/bg/4s/2.png);
+      }
+
+      &_4 {
+        background-image: url(../images/bg/4s/1.png);
+      }
+    }
+
+  }
+
+}
